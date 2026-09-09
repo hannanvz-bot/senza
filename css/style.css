@@ -192,6 +192,18 @@ a { color: inherit; text-decoration: none; }
   pointer-events: none;
 }
 
+/* Video hero */
+.home-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.22) contrast(1.08) saturate(0.7);
+  pointer-events: none;
+}
+
 .home-bg-veil {
   position: absolute;
   inset: 0;
