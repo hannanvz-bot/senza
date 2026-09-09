@@ -192,17 +192,6 @@ a { color: inherit; text-decoration: none; }
   pointer-events: none;
 }
 
-/* Video hero */
-.home-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.22) contrast(1.08) saturate(0.7);
-  pointer-events: none;
-}
 
 .home-bg-veil {
   position: absolute;
@@ -1007,4 +996,92 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 768px) {
   .logo { height: 64px; }
+}
+
+/* ============================================================
+   VIDEO SECTION — Cinematic brand film
+   ============================================================ */
+.video-section {
+  padding: 100px 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.video-label {
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.18);
+  font-family: var(--f-sans);
+  margin-bottom: 40px;
+  padding: 0 56px;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+.brand-video {
+  width: 100%;
+  height: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.75) contrast(1.05) saturate(0.8);
+  pointer-events: none;
+}
+
+/* Overlay con CTA sobre el video */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 60px;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(0,0,0,0.7) 100%
+  );
+}
+
+.video-overlay-text {
+  font-family: var(--f-serif);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 200;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.video-overlay-btn {
+  display: inline-block;
+  padding: 13px 36px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  font-family: var(--f-sans);
+  transition: border-color var(--t), color var(--t), background var(--t);
+  backdrop-filter: blur(4px);
+}
+
+.video-overlay-btn:hover {
+  border-color: rgba(255,255,255,0.8);
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+}
+
+@media (max-width: 768px) {
+  .video-label { padding: 0 24px; }
+  .brand-video { max-height: 60vh; }
+  .video-wrap { max-height: 60vh; }
+  .video-overlay { padding-bottom: 36px; }
 }
