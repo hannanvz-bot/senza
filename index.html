@@ -57,9 +57,13 @@
   <!-- 01 / HOME — Portrait de Vane + tagline + locations -->
   <section id="home" class="home-section">
 
-    <!-- Fondo: silueta champagne, oscuro, una sola foto -->
+    <!-- Fondo: video cinematográfico SENZA -->
     <div class="home-bg">
-      <img src="assets/images/gallery-bw-01.png" alt="" draggable="false" aria-hidden="true">
+      <video class="home-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="assets/senza-hero.mp4" type="video/mp4">
+        <!-- Fallback foto si el video no carga -->
+        <img src="assets/images/gallery-bw-01.png" alt="">
+      </video>
       <div class="home-bg-veil"></div>
     </div>
 
