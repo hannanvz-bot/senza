@@ -48,7 +48,7 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
-.logo { height: 52px; width: auto; }
+.logo { height: 100px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -853,7 +853,7 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 480px) {
   #header { padding: 16px 16px; }
-  .logo { height: 36px; }
+  .logo { height: 64px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -862,5 +862,5 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 768px) {
-  .logo { height: 36px; }
+  .logo { height: 64px; }
 }
