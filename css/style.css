@@ -762,3 +762,82 @@ a { color: inherit; text-decoration: none; }
   .reveal { transition: none; }
   .hero-slide { transition: opacity 0.1s; }
 }
+
+/* ============================================================
+   FLOATING BUTTONS — IG · WA · TOP
+   ============================================================ */
+.float-buttons {
+  position: fixed;
+  bottom: 32px;
+  right: 28px;
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.float-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.4s ease, color 0.4s ease, background 0.4s ease;
+  text-decoration: none;
+}
+
+.float-btn:hover {
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+  background: rgba(0,0,0,0.9);
+}
+
+/* Scroll-down flecha en hero */
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: heroScrollPulse 2.4s ease-in-out infinite;
+  text-decoration: none;
+}
+
+@keyframes heroScrollPulse {
+  0%, 100% { opacity: 0.3; transform: translateX(-50%) translateY(0); }
+  50%       { opacity: 0.7; transform: translateX(-50%) translateY(6px); }
+}
+
+/* Hero overlay como elemento propio */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom,
+      rgba(0,0,0,0.28) 0%,
+      transparent 30%,
+      transparent 55%,
+      rgba(0,0,0,0.6) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-wordmark { z-index: 2; }
+.hero-controls { z-index: 2; }
+.hero-scroll   { z-index: 2; }
+
+@media (max-width: 768px) {
+  .float-buttons { bottom: 24px; right: 16px; gap: 8px; }
+  .float-btn { width: 36px; height: 36px; }
+}
