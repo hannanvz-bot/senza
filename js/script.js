@@ -39,6 +39,7 @@ const i18n = {
     err_name:'Please enter your name.',
     err_email:'Please enter a valid email.',
     err_msg:'Please enter your message.',
+    flip_hint:'Book this session →', ph_name:'Your name', ph_email:'Your email', flip_send:'Send request', flip_ok:'Sent! VZ will reach out soon.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   },
   fr: {
@@ -77,6 +78,7 @@ const i18n = {
     err_name:'Veuillez entrer votre nom.',
     err_email:'Veuillez entrer un e-mail valide.',
     err_msg:'Veuillez entrer votre message.',
+    flip_hint:'Réserver cette séance →', ph_name:'Votre nom', ph_email:'Votre e-mail', flip_send:'Envoyer', flip_ok:'Envoyé! VZ vous contactera bientôt.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   },
   es: {
@@ -115,6 +117,7 @@ const i18n = {
     err_name:'Por favor, escribe tu nombre.',
     err_email:'Por favor, escribe un correo válido.',
     err_msg:'Por favor, escribe tu mensaje.',
+    flip_hint:'Reservar esta sesión →', ph_name:'Tu nombre', ph_email:'Tu correo', flip_send:'Enviar solicitud', flip_ok:'¡Enviado! VZ te contactará pronto.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   }
 };
@@ -266,6 +269,78 @@ function initForm() {
   });
 }
 
+
+/* ── FLIP CARDS — submit to Formspree + WhatsApp notification ── */
+function initFlipCards() {
+  /* Mobile: click to flip */
+  document.querySelectorAll('.flip-card:not(.flip-card--cta)').forEach(card => {
+    card.addEventListener('click', function(e) {
+      if (window.innerWidth <= 1024 && !e.target.closest('form') && !e.target.closest('button')) {
+        this.classList.toggle('flipped');
+      }
+    });
+  });
+
+  /* Form submit — Formspree + WhatsApp link */
+  document.querySelectorAll('.flip-form').forEach(form => {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const session = this.dataset.session;
+      const name    = this.querySelector('[name="name"]').value.trim();
+      const email   = this.querySelector('[name="email"]').value.trim();
+      if (!name || !email) return;
+
+      const ok = this.closest('.flip-back').querySelector('.flip-ok');
+
+      try {
+        /* Send to Formspree → arrives at vsziane@gmail.com */
+        await fetch('https://formspree.io/f/xdkozgkw', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name, email,
+            session_type: session,
+            _subject: `SENZA — New ${session} booking request from ${name}`,
+            message: `Session: ${session}\nName: ${name}\nEmail: ${email}`
+          })
+        });
+
+        /* Show success */
+        this.style.display = 'none';
+        ok.style.display = 'block';
+
+        /* Open WhatsApp MX with pre-filled message */
+        const msg = encodeURIComponent(
+          `Hi VZ! I just requested a *${session}* session on SENZA.\nName: ${name}\nEmail: ${email}`
+        );
+        setTimeout(() => {
+          window.open(`https://wa.me/529981552555?text=${msg}`, '_blank');
+        }, 800);
+
+      } catch(err) {
+        ok.textContent = 'Something went wrong. Please try again.';
+        ok.style.display = 'block';
+      }
+    });
+  });
+
+  /* Translate placeholders */
+  function updatePlaceholders() {
+    const t = i18n[lang];
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      const k = el.dataset.i18nPh;
+      if (t[k]) el.placeholder = t[k];
+    });
+  }
+
+  /* Hook into language changes */
+  const origApply = window._applyLangOrig || applyLang;
+  window._applyLangOrig = origApply;
+  const origRef = applyLang;
+  updatePlaceholders();
+  document.addEventListener('senza:langchange', updatePlaceholders);
+}
+
 /* ── REVEAL ── */
 function initReveal() {
   const obs = new IntersectionObserver(entries => {
@@ -281,12 +356,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!i18n[localStorage.getItem('senza-lang')]) localStorage.setItem('senza-lang', 'en');
   applyLang(lang);
   $$('.lang-btn,.mobile-lang-btn').forEach(b =>
-    b.addEventListener('click', () => applyLang(b.dataset.lang)));
+    b.addEventListener('click', () => { applyLang(b.dataset.lang); document.dispatchEvent(new Event('senza:langchange')); }));
   initHeader();
   initMobile();
   initPortrait();
   initTabs();
   initLightbox();
   initForm();
+  initFlipCards();
   initReveal();
 });
