@@ -860,3 +860,17 @@ a { color: inherit; text-decoration: none; }
   .reveal { transition: none; }
   .home-ring-1, .home-ring-2 { animation: none; }
 }
+
+/* Logo grande en home */
+.home-logo {
+  height: 72px;
+  width: auto;
+  margin-bottom: 8px;
+  filter: brightness(1);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .home-logo { height: 52px; }
+  .logo { height: 34px; }
+}
