@@ -1,113 +1,126 @@
 /* ============================================================
-   SENZA — script.js
-   Default: EN. Order: EN / FR / ES.
-   Clears stale lang cache on first load if not en/fr/es.
+   SENZA — script.js  |  EN default · FR · ES
    ============================================================ */
 
 const i18n = {
   en: {
-    nav_home:'Home', nav_gallery:'Gallery', nav_about:'About',
-    nav_testi:'Testimonials', nav_contact:'Contact',
-    locations:'USA · Mexico · Spain · South of France',
-    hero_sub:'intimate photography',
-    tagline:'Intimate photography\nand erotic visual art.',
-    intro_sub:'USA · Mexico · Spain · South of France',
+    nav_home:'Home', nav_book:'Book', nav_gallery:'Gallery', nav_contact:'Contact',
+    home_label:'intimate photography by VZ',
+    home_headline:'Book your\ntransformation.',
+    home_sub:'USA · Mexico · Spain · South of France',
+    home_cta:'Reserve a session',
+    book_label:'Sessions',
+    book_headline:'What would you like\nto create?',
+    s_women:'Women',
+    s_women_d:'A private session that celebrates your body, sensuality and confidence — entirely on your terms.',
+    s_couples:'Couples',
+    s_couples_d:'Intimate portraits that capture the chemistry, desire and tenderness between two people.',
+    s_boudoir:'Boudoir',
+    s_boudoir_d:'Editorial boudoir photography — artistic, sensual, and completely confidential.',
+    s_family:'Family & Maternity',
+    s_family_d:'Authentic, emotional portraits of the moments that define your family story.',
+    s_corporate:'Corporate & Brand',
+    s_corporate_d:'Professional portraits and brand imagery with the same artistic vision and attention to detail.',
+    s_cta_text:'Every session is unique.\nLet\'s talk about yours.',
+    s_cta_btn:'Get in touch',
     gallery_label:'Gallery',
-    about_label:'About SENZA',
-    about_title:'VZ',
-    about_p1:'SENZA is a space where the body becomes language. Where light constructs silence. Where each image holds what words cannot reach.',
-    about_p2:'Every session is an act of mutual trust — conducted with care, absolute discretion, and deep respect for the intimacy of each person. The result is not simply an image. It is a private world, captured forever.',
-    about_p3:'Available for exclusive private sessions in Texas (USA), Cancún and Mexico City.',
-    testi_label:'Testimonials', testi_note:'— Sample texts —',
-    testi1:'"An experience unlike any I had imagined. Everything felt elegant, intimate — and completely mine."',
-    testi1_meta:'Private client — Texas',
-    testi2:'"I left with images I never thought I could have of myself. The process was respectful, warm, and deeply artistic."',
-    testi2_meta:'Private client — New York',
-    testi3:'"SENZA is not a photoshoot. It\'s the opportunity to see yourself as you truly are — without filters, without shame."',
-    testi3_meta:'Couple — Cancún',
-    testi4:'"Une expérience d\'une élégance absolue. VZ sait créer un espace où tout devient possible."',
-    testi4_meta:'Private client — Paris',
+    gallery_intro:'A selection of work — intimate, editorial, and always private.',
+    tab_color:'Color',
+    tab_bw:'B&W',
     contact_label:'Contact',
     contact_headline:'Every image begins\nwith a conversation.',
     label_sessions:'Sessions',
     contact_avail:'USA · Mexico · Spain · South of France',
     contact_privacy:'All sessions are conducted in complete privacy, with absolute respect for the intimacy and consent of every participant.',
-    field_name:'Name', field_email:'Email', field_message:'Message',
-    btn_send:'Send message', form_ok:'Your message has been sent. Thank you.',
-    err_name:'Please enter your name.', err_email:'Please enter a valid email.', err_msg:'Please enter your message.',
-    tab_color:'Color', tab_bw:'B&W',
+    field_name:'Name', field_email:'Email', field_session:'Session type', field_message:'Message',
+    opt_select:'Select...',
+    btn_send:'Send message',
+    form_ok:'Your message has been sent. Thank you.',
+    err_name:'Please enter your name.',
+    err_email:'Please enter a valid email.',
+    err_msg:'Please enter your message.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   },
   fr: {
-    nav_home:'Accueil', nav_gallery:'Galerie', nav_about:'À propos',
-    nav_testi:'Témoignages', nav_contact:'Contact',
-    locations:'USA · Mexique · Espagne · Sud de la France',
-    hero_sub:'photographie intime',
-    tagline:'Photographie intime\net art visuel érotique.',
-    intro_sub:'USA · Mexique · Espagne · Sud de la France',
-    gallery_label:'Galerie', about_label:'À propos de SENZA', about_title:'VZ',
-    about_p1:'SENZA est un espace où le corps devient langage. Où la lumière construit le silence. Où chaque image garde ce que les mots ne peuvent pas atteindre.',
-    about_p2:'Chaque séance est un acte de confiance mutuelle — menée avec soin, discrétion absolue et profond respect pour l\'intimité de chaque personne. Le résultat n\'est pas simplement une image. C\'est un monde privé, capturé pour toujours.',
-    about_p3:'Disponible pour des séances privées exclusives au Texas (USA), à Cancún et à Mexico.',
-    testi_label:'Témoignages', testi_note:'— Textes exemples —',
-    testi1:'"Une expérience différente de tout ce que j\'avais imaginé. Tout était élégant, intime — et complètement à moi."',
-    testi1_meta:'Cliente privée — Texas',
-    testi2:'"Je suis repartie avec des images que je n\'aurais jamais imaginé avoir de moi-même."',
-    testi2_meta:'Cliente privée — New York',
-    testi3:'"SENZA n\'est pas une séance photo. C\'est l\'opportunité de se voir tel qu\'on est vraiment."',
-    testi3_meta:'Couple — Cancún',
-    testi4:'"Une expérience d\'une élégance absolue. VZ sait créer un espace où tout devient possible."',
-    testi4_meta:'Cliente privée — Paris',
+    nav_home:'Accueil', nav_book:'Réserver', nav_gallery:'Galerie', nav_contact:'Contact',
+    home_label:'photographie intime par VZ',
+    home_headline:'Réservez votre\ntransformation.',
+    home_sub:'USA · Mexique · Espagne · Sud de la France',
+    home_cta:'Réserver une séance',
+    book_label:'Séances',
+    book_headline:'Qu\'aimeriez-vous\ncréer?',
+    s_women:'Femmes',
+    s_women_d:'Une séance privée qui célèbre votre corps, votre sensualité et votre confiance — entièrement selon vos conditions.',
+    s_couples:'Couples',
+    s_couples_d:'Portraits intimes qui capturent la chimie, le désir et la tendresse entre deux personnes.',
+    s_boudoir:'Boudoir',
+    s_boudoir_d:'Photographie boudoir éditoriale — artistique, sensuelle et totalement confidentielle.',
+    s_family:'Famille & Maternité',
+    s_family_d:'Portraits authentiques et émouvants des moments qui définissent votre histoire familiale.',
+    s_corporate:'Corporate & Image de marque',
+    s_corporate_d:'Portraits professionnels avec la même vision artistique et la même attention aux détails.',
+    s_cta_text:'Chaque séance est unique.\nParlons de la vôtre.',
+    s_cta_btn:'Nous contacter',
+    gallery_label:'Galerie',
+    gallery_intro:'Une sélection de travaux — intimes, éditoriaux et toujours privés.',
+    tab_color:'Couleur',
+    tab_bw:'N&B',
     contact_label:'Contact',
     contact_headline:'Chaque image commence\npar une conversation.',
     label_sessions:'Séances',
     contact_avail:'USA · Mexique · Espagne · Sud de la France',
     contact_privacy:'Toutes les séances sont réalisées dans une confidentialité totale, avec respect absolu de l\'intimité et du consentement de chaque participant.',
-    field_name:'Nom', field_email:'E-mail', field_message:'Message',
-    btn_send:'Envoyer', form_ok:'Votre message a été envoyé. Merci.',
-    err_name:'Veuillez entrer votre nom.', err_email:'Veuillez entrer un e-mail valide.', err_msg:'Veuillez entrer votre message.',
-    tab_color:'Color', tab_bw:'N&B',
+    field_name:'Nom', field_email:'E-mail', field_session:'Type de séance', field_message:'Message',
+    opt_select:'Choisir...',
+    btn_send:'Envoyer',
+    form_ok:'Votre message a été envoyé. Merci.',
+    err_name:'Veuillez entrer votre nom.',
+    err_email:'Veuillez entrer un e-mail valide.',
+    err_msg:'Veuillez entrer votre message.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   },
   es: {
-    nav_home:'Inicio', nav_gallery:'Galería', nav_about:'Sobre SENZA',
-    nav_testi:'Testimonios', nav_contact:'Contacto',
-    locations:'USA · México · España · Sur de Francia',
-    hero_sub:'fotografía íntima',
-    tagline:'Fotografía íntima\ny arte visual erótico.',
-    intro_sub:'USA · México · España · Sur de Francia',
-    gallery_label:'Galería', about_label:'Sobre SENZA', about_title:'VZ',
-    about_p1:'SENZA es un espacio donde el cuerpo se convierte en lenguaje. Donde la luz construye silencio. Donde cada imagen guarda lo que las palabras no alcanzan.',
-    about_p2:'Cada sesión es un acto de confianza mutua — conducida con cuidado, discreción absoluta y profundo respeto por la intimidad de cada persona. El resultado no es simplemente una imagen. Es un mundo privado, capturado para siempre.',
-    about_p3:'Disponible para sesiones privadas exclusivas en Texas (USA), Cancún y CDMX (México).',
-    testi_label:'Testimonios', testi_note:'— Textos de ejemplo —',
-    testi1:'"Una experiencia completamente diferente a cualquier cosa que había imaginado. Elegante, íntima — y completamente mía."',
-    testi1_meta:'Cliente privada — Texas',
-    testi2:'"Salí con imágenes que nunca habría pensado poder tener de mí misma. El proceso fue respetuoso, cálido y profundamente artístico."',
-    testi2_meta:'Cliente privada — Nueva York',
-    testi3:'"SENZA no es una sesión fotográfica. Es la oportunidad de verte tal como eres — sin filtros, sin vergüenza."',
-    testi3_meta:'Pareja — Cancún',
-    testi4:'"Une expérience d\'une élégance absolue. VZ sait créer un espace où tout devient possible."',
-    testi4_meta:'Cliente — París',
+    nav_home:'Inicio', nav_book:'Reservar', nav_gallery:'Galería', nav_contact:'Contacto',
+    home_label:'fotografía íntima por VZ',
+    home_headline:'Reserva tu\ntransformación.',
+    home_sub:'USA · México · España · Sur de Francia',
+    home_cta:'Reservar sesión',
+    book_label:'Sesiones',
+    book_headline:'¿Qué te gustaría\ncrear?',
+    s_women:'Mujeres',
+    s_women_d:'Una sesión privada que celebra tu cuerpo, sensualidad y confianza — completamente en tus términos.',
+    s_couples:'Parejas',
+    s_couples_d:'Retratos íntimos que capturan la química, el deseo y la ternura entre dos personas.',
+    s_boudoir:'Boudoir',
+    s_boudoir_d:'Fotografía boudoir editorial — artística, sensual y completamente confidencial.',
+    s_family:'Familia y Maternidad',
+    s_family_d:'Retratos auténticos y emotivos de los momentos que definen tu historia familiar.',
+    s_corporate:'Corporativo y Marca Personal',
+    s_corporate_d:'Retratos profesionales con la misma visión artística y atención al detalle.',
+    s_cta_text:'Cada sesión es única.\nHablemos de la tuya.',
+    s_cta_btn:'Contáctanos',
+    gallery_label:'Galería',
+    gallery_intro:'Una selección de trabajo — íntimo, editorial y siempre privado.',
+    tab_color:'Color',
+    tab_bw:'B&N',
     contact_label:'Contacto',
     contact_headline:'Cada imagen comienza\ncon una conversación.',
     label_sessions:'Sesiones',
     contact_avail:'USA · México · España · Sur de Francia',
     contact_privacy:'Todas las sesiones se realizan con absoluta privacidad y respeto por la intimidad y el consentimiento de cada participante.',
-    field_name:'Nombre', field_email:'Correo electrónico', field_message:'Mensaje',
-    btn_send:'Enviar mensaje', form_ok:'Tu mensaje ha sido enviado. Gracias.',
-    err_name:'Por favor, escribe tu nombre.', err_email:'Por favor, escribe un correo válido.', err_msg:'Por favor, escribe tu mensaje.',
-    tab_color:'Color', tab_bw:'B&N',
+    field_name:'Nombre', field_email:'Correo electrónico', field_session:'Tipo de sesión', field_message:'Mensaje',
+    opt_select:'Seleccionar...',
+    btn_send:'Enviar mensaje',
+    form_ok:'Tu mensaje ha sido enviado. Gracias.',
+    err_name:'Por favor, escribe tu nombre.',
+    err_email:'Por favor, escribe un correo válido.',
+    err_msg:'Por favor, escribe tu mensaje.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   }
 };
 
-/* Force EN if stale value */
 const stored = localStorage.getItem('senza-lang');
 let lang = (stored && i18n[stored]) ? stored : 'en';
-if (!i18n[lang]) lang = 'en';
-
-let heroIdx = 0, heroTimer = null;
 let galleryImgs = [], lbIdx = 0;
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
@@ -122,48 +135,17 @@ function applyLang(l) {
   $$('[data-i18n]').forEach(el => {
     const k = el.dataset.i18n;
     if (t[k] == null) return;
+    if (el.tagName === 'OPTION') { el.textContent = t[k]; return; }
     el.innerHTML = t[k].replace(/\n/g, '<br>');
   });
   $$('.lang-btn,.mobile-lang-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.lang === l));
 }
 
-/* ── HERO ── */
-function heroGoto(i) {
-  const slides = $$('.hero-slide'), dots = $$('.hero-dots li');
-  slides[heroIdx].classList.remove('active');
-  dots[heroIdx]?.classList.remove('active');
-  heroIdx = (i + slides.length) % slides.length;
-  slides[heroIdx].classList.add('active');
-  dots[heroIdx]?.classList.add('active');
-}
-function heroPlay() {
-  clearInterval(heroTimer);
-  heroTimer = setInterval(() => heroGoto(heroIdx + 1), 5000);
-}
-function initHero() {
-  const slides = $$('.hero-slide');
-  if (!slides.length) return;
-  const dl = $('.hero-dots');
-  if (dl) {
-    dl.innerHTML = '';
-    slides.forEach((_, i) => {
-      const li = document.createElement('li');
-      if (!i) li.classList.add('active');
-      li.addEventListener('click', () => { heroGoto(i); heroPlay(); });
-      dl.appendChild(li);
-    });
-  }
-  slides[0].classList.add('active');
-  heroPlay();
-  $('.hero-btn-prev')?.addEventListener('click', () => { heroGoto(heroIdx - 1); heroPlay(); });
-  $('.hero-btn-next')?.addEventListener('click', () => { heroGoto(heroIdx + 1); heroPlay(); });
-}
-
 /* ── HEADER ── */
 function initHeader() {
   window.addEventListener('scroll', () =>
-    $('#header').classList.toggle('scrolled', scrollY > 50), { passive: true });
+    $('#header').classList.toggle('scrolled', scrollY > 40), { passive: true });
 }
 
 /* ── MOBILE MENU ── */
@@ -182,12 +164,46 @@ function initMobile() {
   }));
 }
 
+/* ── PORTRAIT MAGNETIC ── */
+function initPortrait() {
+  const wrap = $('.home-portrait-wrap');
+  if (!wrap) return;
+  wrap.addEventListener('mousemove', e => {
+    const r = wrap.getBoundingClientRect();
+    const dx = (e.clientX - r.left - r.width  / 2) / r.width  * 12;
+    const dy = (e.clientY - r.top  - r.height / 2) / r.height * 12;
+    wrap.querySelector('.home-portrait').style.transform =
+      `translate(${dx}px,${dy}px)`;
+  });
+  wrap.addEventListener('mouseleave', () => {
+    wrap.querySelector('.home-portrait').style.transform = '';
+  });
+}
+
+/* ── GALLERY TABS ── */
+function initTabs() {
+  $$('.gtab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      $$('.gtab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      $$('.gallery-pane').forEach(p => p.classList.remove('active'));
+      const pane = document.getElementById('gallery-' + target);
+      if (pane) {
+        pane.classList.add('active');
+        $$('#gallery-' + target + ' .reveal:not(.visible)').forEach(el => {
+          requestAnimationFrame(() => el.classList.add('visible'));
+        });
+      }
+    });
+  });
+}
+
 /* ── LIGHTBOX ── */
 function openLb(i) {
   lbIdx = i;
   const img = $('#lightbox .lightbox-img');
   img.src = galleryImgs[i].src;
-  img.alt = galleryImgs[i].alt;
   $('#lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -199,33 +215,29 @@ function lbNav(d) {
   lbIdx = (lbIdx + d + galleryImgs.length) % galleryImgs.length;
   const img = $('#lightbox .lightbox-img');
   img.style.opacity = '0';
-  setTimeout(() => { img.src = galleryImgs[lbIdx].src; img.style.opacity = '1'; }, 180);
+  setTimeout(() => { img.src = galleryImgs[lbIdx].src; img.style.opacity = '1'; }, 150);
 }
 function initLightbox() {
   const items = $$('.gallery-item');
-  galleryImgs = items.map(el => ({
-    src: el.querySelector('img').src,
-    alt: el.querySelector('img').alt
-  }));
+  galleryImgs = items.map(el => ({ src: el.querySelector('img').src }));
   items.forEach((el, i) => {
     el.addEventListener('click', () => openLb(i));
-    el.setAttribute('role', 'button');
-    el.setAttribute('tabindex', '0');
-    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openLb(i); });
+    el.setAttribute('role', 'button'); el.setAttribute('tabindex', '0');
+    el.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') openLb(i); });
   });
   $('.lightbox-close')?.addEventListener('click', closeLb);
-  $('.lightbox-prev')?.addEventListener('click', () => lbNav(-1));
-  $('.lightbox-next')?.addEventListener('click', () => lbNav(1));
-  $('#lightbox')?.addEventListener('click', e => { if (e.target === e.currentTarget) closeLb(); });
+  $('.lightbox-prev')?.addEventListener('click',  () => lbNav(-1));
+  $('.lightbox-next')?.addEventListener('click',  () => lbNav(1));
+  $('#lightbox')?.addEventListener('click', e => { if (e.target===e.currentTarget) closeLb(); });
   document.addEventListener('keydown', e => {
     if (!$('#lightbox').classList.contains('open')) return;
-    if (e.key === 'Escape') closeLb();
-    if (e.key === 'ArrowLeft') lbNav(-1);
-    if (e.key === 'ArrowRight') lbNav(1);
+    if (e.key==='Escape')      closeLb();
+    if (e.key==='ArrowLeft')   lbNav(-1);
+    if (e.key==='ArrowRight')  lbNav(1);
   });
   let ts = 0;
-  $('#lightbox')?.addEventListener('touchstart', e => { ts = e.touches[0].clientX; }, { passive: true });
-  $('#lightbox')?.addEventListener('touchend', e => {
+  $('#lightbox')?.addEventListener('touchstart', e => { ts = e.touches[0].clientX; }, {passive:true});
+  $('#lightbox')?.addEventListener('touchend',   e => {
     const d = ts - e.changedTouches[0].clientX;
     if (Math.abs(d) > 50) lbNav(d > 0 ? 1 : -1);
   });
@@ -242,7 +254,7 @@ function initForm() {
       const f = form.querySelector(`[name="${name}"]`);
       const w = f?.closest('.form-field');
       const bad = !f?.value.trim() ||
-        (name === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value));
+        (name==='email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value));
       w?.classList.toggle('error', bad);
       if (bad) ok = false;
     };
@@ -252,73 +264,6 @@ function initForm() {
       $('.form-success').style.display = 'block';
     }
   });
-}
-
-
-/* ── GALLERY TABS ── */
-function initGalleryTabs() {
-  const tabs = $$('.gallery-tab');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.tab;
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      $$('.gallery-pane').forEach(p => p.classList.remove('active'));
-      const pane = document.getElementById('gallery-' + target);
-      if (pane) {
-        pane.classList.add('active');
-        // Re-trigger reveal for newly visible items
-        $$('#gallery-' + target + ' .reveal:not(.visible)').forEach(el => {
-          setTimeout(() => el.classList.add('visible'), 50);
-        });
-      }
-    });
-  });
-}
-
-
-/* ── ABOUT PORTRAIT — cursor magnético + morph ── */
-function initAboutPortrait() {
-  const wrap = document.getElementById('aboutPortrait');
-  const dot  = document.getElementById('aboutCursorDot');
-  if (!wrap || !dot) return;
-
-  let mouseX = 0, mouseY = 0;
-  let dotX = 0, dotY = 0;
-  let rafId = null;
-
-  wrap.addEventListener('mousemove', e => {
-    const rect = wrap.getBoundingClientRect();
-    mouseX = e.clientX - rect.left;
-    mouseY = e.clientY - rect.top;
-
-    // Movimiento magnético sutil de la imagen principal
-    const main = wrap.querySelector('.about-portrait-main');
-    const ghost = wrap.querySelector('.about-portrait-ghost');
-    const dx = (mouseX / rect.width  - 0.5) * 10;
-    const dy = (mouseY / rect.height - 0.5) * 10;
-    if (main)  main.style.transform  = `translate(${dx}px, ${dy}px) scale(1.03)`;
-    if (ghost) ghost.style.transform = `translate(${dx * 0.6}px, ${dy * 0.6}px)`;
-
-    if (!rafId) rafId = requestAnimationFrame(animDot);
-  });
-
-  wrap.addEventListener('mouseleave', () => {
-    const main  = wrap.querySelector('.about-portrait-main');
-    const ghost = wrap.querySelector('.about-portrait-ghost');
-    if (main)  main.style.transform  = '';
-    if (ghost) ghost.style.transform = '';
-    cancelAnimationFrame(rafId);
-    rafId = null;
-  });
-
-  function animDot() {
-    dotX += (mouseX - dotX) * 0.12;
-    dotY += (mouseY - dotY) * 0.12;
-    dot.style.left = dotX + 'px';
-    dot.style.top  = dotY + 'px';
-    rafId = requestAnimationFrame(animDot);
-  }
 }
 
 /* ── REVEAL ── */
@@ -333,21 +278,15 @@ function initReveal() {
 
 /* ── INIT ── */
 document.addEventListener('DOMContentLoaded', () => {
-  /* Clear stale ES cache — force EN as default */
-  const s = localStorage.getItem('senza-lang');
-  if (!s || !i18n[s]) localStorage.setItem('senza-lang', 'en');
-
+  if (!i18n[localStorage.getItem('senza-lang')]) localStorage.setItem('senza-lang', 'en');
   applyLang(lang);
-
   $$('.lang-btn,.mobile-lang-btn').forEach(b =>
     b.addEventListener('click', () => applyLang(b.dataset.lang)));
-
   initHeader();
-  initHero();
   initMobile();
+  initPortrait();
+  initTabs();
   initLightbox();
   initForm();
-  initGalleryTabs();
-  initAboutPortrait();
   initReveal();
 });
