@@ -3,9 +3,341 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SENZA — intimate photography by VZ</title>
+
+  <!-- SEO -->
+  <title>SENZA | Intimate Photography by VZ</title>
+  <meta name="description" content="Fotografía íntima y arte visual erótico. Vanesa Ávila Zubizarreta. Sesiones privadas en Texas, Cancún y CDMX.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SENZA | Intimate Photography by VZ">
+  <meta property="og:description" content="Fotografía íntima y arte visual erótico. Sesiones privadas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-01.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Fonts: Cormorant Garamond + Inter (pesos mínimos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Preload primera imagen del hero -->
+  <link rel="preload" as="image" href="assets/images/hero-01.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- En construcción -->
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header id="header" role="banner">
+  <a href="#hero" aria-label="SENZA — Inicio">
+    <img src="assets/images/logo.png" alt="SENZA intimate photography by VZ" class="logo">
+  </a>
+
+  <nav role="navigation" aria-label="Navegación principal">
+    <ul class="nav-links">
+      <li><span class="nav-locations" data-i18n="locations">Texas, USA · Cancún · CDMX, México</span></li>
+      <li><a href="#hero"         data-i18n="nav_home">Inicio</a></li>
+      <li><a href="#gallery"      data-i18n="nav_gallery">Galería</a></li>
+      <li><a href="#about"        data-i18n="nav_about">Sobre SENZA</a></li>
+      <li><a href="#testimonials" data-i18n="nav_testimonials">Testimonios</a></li>
+      <li><a href="#contact"      data-i18n="nav_contact">Contacto</a></li>
+      <li>
+        <ul class="lang-switcher" aria-label="Seleccionar idioma">
+          <li><button class="lang-btn active" data-lang="es" aria-label="Español">ES</button></li>
+          <li><button class="lang-btn" data-lang="en" aria-label="English">EN</button></li>
+          <li><button class="lang-btn" data-lang="fr" aria-label="Français">FR</button></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hamburger mobile -->
+  <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Menú mobile overlay -->
+<nav class="mobile-menu" aria-label="Menú móvil">
+  <a href="#hero"         data-i18n="nav_home">Inicio</a>
+  <a href="#gallery"      data-i18n="nav_gallery">Galería</a>
+  <a href="#about"        data-i18n="nav_about">Sobre SENZA</a>
+  <a href="#testimonials" data-i18n="nav_testimonials">Testimonios</a>
+  <a href="#contact"      data-i18n="nav_contact">Contacto</a>
+  <ul class="mobile-lang">
+    <li><button class="mobile-lang-btn active" data-lang="es">ES</button></li>
+    <li><button class="mobile-lang-btn" data-lang="en">EN</button></li>
+    <li><button class="mobile-lang-btn" data-lang="fr">FR</button></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ============================================================
+       HERO — SLIDER FADE
+       ============================================================ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-inner">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide active" aria-hidden="false">
+        <img src="assets/images/hero-01.png" alt="SENZA — fotografía íntima" draggable="false">
+      </div>
+      <!-- Slide 2 -->
+      <div class="hero-slide" aria-hidden="true">
+        <img src="assets/images/hero-02.png" alt="SENZA — fotografía íntima" draggable="false" loading="lazy">
+      </div>
+      <!-- Slide 3 -->
+      <div class="hero-slide" aria-hidden="true">
+        <img src="assets/images/hero-03.png" alt="SENZA — fotografía íntima" draggable="false" loading="lazy">
+      </div>
+      <!-- Slide 4 -->
+      <div class="hero-slide" aria-hidden="true">
+        <img src="assets/images/hero-04.png" alt="SENZA — fotografía íntima" draggable="false" loading="lazy">
+      </div>
+      <!-- Slide 5 -->
+      <div class="hero-slide" aria-hidden="true">
+        <img src="assets/images/hero-05.png" alt="SENZA — fotografía íntima" draggable="false" loading="lazy">
+      </div>
+
+      <!-- Controles -->
+      <div class="hero-controls" aria-label="Controles del slider">
+        <button class="hero-btn hero-btn-prev" aria-label="Anterior">&#8592;</button>
+        <ul class="hero-dots" role="tablist" aria-label="Slides"></ul>
+        <button class="hero-btn hero-btn-next" aria-label="Siguiente">&#8594;</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTRO / TAGLINE
+       ============================================================ -->
+  <section id="intro" aria-label="Introducción">
+    <p class="tagline reveal" data-i18n="tagline">
+      Fotografía íntima y arte visual erótico.
+    </p>
+  </section>
+
+  <!-- ============================================================
+       GALERÍA
+       ============================================================ -->
+  <section id="gallery" aria-label="Galería">
+    <p class="gallery-header reveal" data-i18n="gallery_label">Galería</p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 1">
+        <img src="assets/images/gallery-01.png" alt="SENZA — obra 01" draggable="false" loading="lazy">
+      </div>
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 2">
+        <img src="assets/images/gallery-02.png" alt="SENZA — obra 02" draggable="false" loading="lazy">
+      </div>
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 3">
+        <img src="assets/images/gallery-03.png" alt="SENZA — obra 03" draggable="false" loading="lazy">
+      </div>
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 4">
+        <img src="assets/images/gallery-04.png" alt="SENZA — obra 04" draggable="false" loading="lazy">
+      </div>
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 5">
+        <img src="assets/images/gallery-05.png" alt="SENZA — obra 05" draggable="false" loading="lazy">
+      </div>
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 6">
+        <img src="assets/images/gallery-06.png" alt="SENZA — obra 06" draggable="false" loading="lazy">
+      </div>
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 7">
+        <img src="assets/images/gallery-07.png" alt="SENZA — obra 07" draggable="false" loading="lazy">
+      </div>
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 8">
+        <img src="assets/images/gallery-08.png" alt="SENZA — obra 08" draggable="false" loading="lazy">
+      </div>
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 9">
+        <img src="assets/images/gallery-09.png" alt="SENZA — obra 09" draggable="false" loading="lazy">
+      </div>
+
+      <div class="gallery-item reveal" aria-label="Ver imagen 10">
+        <img src="assets/images/gallery-10.png" alt="SENZA — obra 10" draggable="false" loading="lazy">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOBRE SENZA / VANESA
+       ============================================================ -->
+  <section id="about" aria-label="Sobre SENZA">
+
+    <div class="about-col-left">
+      <p class="about-label reveal" data-i18n="about_label">Sobre SENZA</p>
+      <h2 class="about-title reveal" data-i18n="about_title">Vanesa Ávila Zubizarreta</h2>
+      <div class="about-text reveal">
+        <p data-i18n="about_p1">
+          SENZA nace como un espacio de fotografía íntima y arte visual. Un lugar donde el cuerpo se convierte en lenguaje, donde la luz construye silencio y donde cada imagen guarda aquello que las palabras no alcanzan a decir.
+        </p>
+        <p data-i18n="about_p2">
+          La sesión fotográfica es un acto de confianza mutua. Trabajamos con delicadeza, discreción y profundo respeto por la intimidad de cada persona. El resultado no es una imagen. Es una experiencia.
+        </p>
+        <p data-i18n="about_p3">
+          Disponible para sesiones privadas en Texas (USA), Cancún y CDMX (México).
+        </p>
+      </div>
+    </div>
+
+    <div class="about-image reveal">
+      <!-- Fotografía de Vanesa / foto de presentación -->
+      <img src="assets/images/hero-01.png" alt="Vanesa Ávila Zubizarreta — SENZA" draggable="false" loading="lazy">
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIOS
+       ============================================================ -->
+  <section id="testimonials" aria-label="Testimonios">
+
+    <p class="testimonials-label reveal" data-i18n="testi_label">Testimonios</p>
+    <p class="testimonial-note reveal" data-i18n="testi_note">— Textos de ejemplo / Placeholders —</p>
+
+    <blockquote class="testimonial reveal">
+      <p class="testimonial-quote" data-i18n="testi1_text">Una experiencia completamente diferente a cualquier sesión que había imaginado. Todo se sintió elegante, íntimo y natural.</p>
+      <cite class="testimonial-meta" data-i18n="testi1_meta">Cliente privada — México</cite>
+    </blockquote>
+
+    <blockquote class="testimonial reveal">
+      <p class="testimonial-quote" data-i18n="testi2_text">Salí con imágenes que nunca habría pensado que podría tener de mí misma. El proceso fue respetuoso, cálido y profundamente artístico.</p>
+      <cite class="testimonial-meta" data-i18n="testi2_meta">Cliente privada — Texas</cite>
+    </blockquote>
+
+    <blockquote class="testimonial reveal">
+      <p class="testimonial-quote" data-i18n="testi3_text">SENZA no es una sesión fotográfica. Es la oportunidad de verte tal como eres, sin filtros y sin vergüenza.</p>
+      <cite class="testimonial-meta" data-i18n="testi3_meta">Pareja — Cancún</cite>
+    </blockquote>
+
+    <blockquote class="testimonial reveal">
+      <p class="testimonial-quote" data-i18n="testi4_text">Une expérience différente de tout ce que j'avais imaginé. Tout était élégant, intime et profondément naturel.</p>
+      <cite class="testimonial-meta" data-i18n="testi4_meta">Cliente privée — France</cite>
+    </blockquote>
+
+  </section>
+
+  <!-- ============================================================
+       CONTACTO
+       ============================================================ -->
+  <section id="contact" aria-label="Contacto">
+
+    <!-- Info -->
+    <div class="contact-info">
+      <p class="contact-info-label reveal" data-i18n="contact_label">Contacto</p>
+      <h2 class="contact-headline reveal" data-i18n="contact_headline">Cada imagen comienza<br>con una conversación.</h2>
+
+      <div class="contact-details reveal">
+
+        <div class="contact-item">
+          <span class="contact-item-label">Email</span>
+          <a href="mailto:vsziane@gmail.com" aria-label="Enviar correo a SENZA">vsziane@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-item-label">WhatsApp</span>
+          <a href="https://wa.me/529981552555" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">+52 998 155 2555</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-item-label">Teléfono</span>
+          <a href="tel:+529981552555" aria-label="Llamar a SENZA">+52 998 155 2555</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-item-label">Sesiones</span>
+          <span data-i18n="contact_avail">Disponible para sesiones en Texas (USA), Cancún y CDMX (México).</span>
+        </div>
+
+      </div>
+
+      <p class="contact-privacy reveal" data-i18n="contact_privacy">
+        Todas las sesiones se realizan de forma completamente privada, con absoluto respeto por la intimidad y el consentimiento de cada participante.
+      </p>
+    </div>
+
+    <!-- Formulario -->
+    <div class="contact-form-wrapper">
+      <form id="contact-form" class="contact-form reveal" novalidate
+            action="https://formspree.io/f/XXXXXXXX" method="POST">
+        <!-- Sustituir XXXXXXXX por tu endpoint de Formspree cuando lo configures -->
+
+        <div class="form-field">
+          <label for="field-name" data-i18n="field_name">Nombre</label>
+          <input type="text" id="field-name" name="name"
+                 data-i18n-placeholder="field_name" autocomplete="name"
+                 aria-required="true">
+          <span class="field-error" data-i18n="err_name">Por favor, escribe tu nombre.</span>
+        </div>
+
+        <div class="form-field">
+          <label for="field-email" data-i18n="field_email">Correo electrónico</label>
+          <input type="email" id="field-email" name="email"
+                 data-i18n-placeholder="field_email" autocomplete="email"
+                 aria-required="true">
+          <span class="field-error" data-i18n="err_email">Por favor, escribe un correo válido.</span>
+        </div>
+
+        <div class="form-field">
+          <label for="field-message" data-i18n="field_message">Mensaje</label>
+          <textarea id="field-message" name="message"
+                    data-i18n-placeholder="field_message"
+                    aria-required="true"></textarea>
+          <span class="field-error" data-i18n="err_message">Por favor, escribe tu mensaje.</span>
+        </div>
+
+        <button type="submit" class="btn-submit" data-i18n="btn_send">Enviar mensaje</button>
+      </form>
+
+      <p class="form-success" data-i18n="form_success">Tu mensaje ha sido enviado. Gracias.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="footer" role="contentinfo">
+  <p class="footer-copy" data-i18n="footer_copy">© 2026 SENZA · intimate photography by VZ</p>
+  <ul class="footer-links">
+    <!-- Reemplaza # con las URLs reales cuando las tengas -->
+    <li><a href="#" data-i18n="footer_ig" aria-label="Instagram de SENZA">Instagram</a></li>
+    <li><a href="https://wa.me/529981552555" target="_blank" rel="noopener" data-i18n="footer_wa" aria-label="WhatsApp de SENZA">WhatsApp</a></li>
+    <li><a href="mailto:vsziane@gmail.com">vsziane@gmail.com</a></li>
+  </ul>
+</footer>
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imagen">
+  <button class="lightbox-prev" aria-label="Imagen anterior">&#8592;</button>
+  <img class="lightbox-img" src="" alt="" draggable="false">
+  <button class="lightbox-next" aria-label="Imagen siguiente">&#8594;</button>
+  <button class="lightbox-close" aria-label="Cerrar visor">&#10005;</button>
+</div>
+
+<!-- JS -->
+<script src="js/script.js"></script>
+
 </body>
 </html>
