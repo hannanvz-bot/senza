@@ -35,6 +35,7 @@ const i18n = {
     field_name:'Name', field_email:'Email', field_message:'Message',
     btn_send:'Send message', form_ok:'Your message has been sent. Thank you.',
     err_name:'Please enter your name.', err_email:'Please enter a valid email.', err_msg:'Please enter your message.',
+    tab_color:'Color', tab_bw:'B&W',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   },
   fr: {
@@ -65,6 +66,7 @@ const i18n = {
     field_name:'Nom', field_email:'E-mail', field_message:'Message',
     btn_send:'Envoyer', form_ok:'Votre message a été envoyé. Merci.',
     err_name:'Veuillez entrer votre nom.', err_email:'Veuillez entrer un e-mail valide.', err_msg:'Veuillez entrer votre message.',
+    tab_color:'Color', tab_bw:'N&B',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   },
   es: {
@@ -95,6 +97,7 @@ const i18n = {
     field_name:'Nombre', field_email:'Correo electrónico', field_message:'Mensaje',
     btn_send:'Enviar mensaje', form_ok:'Tu mensaje ha sido enviado. Gracias.',
     err_name:'Por favor, escribe tu nombre.', err_email:'Por favor, escribe un correo válido.', err_msg:'Por favor, escribe tu mensaje.',
+    tab_color:'Color', tab_bw:'B&N',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   }
 };
@@ -251,6 +254,28 @@ function initForm() {
   });
 }
 
+
+/* ── GALLERY TABS ── */
+function initGalleryTabs() {
+  const tabs = $$('.gallery-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      $$('.gallery-pane').forEach(p => p.classList.remove('active'));
+      const pane = document.getElementById('gallery-' + target);
+      if (pane) {
+        pane.classList.add('active');
+        // Re-trigger reveal for newly visible items
+        $$('#gallery-' + target + ' .reveal:not(.visible)').forEach(el => {
+          setTimeout(() => el.classList.add('visible'), 50);
+        });
+      }
+    });
+  });
+}
+
 /* ── REVEAL ── */
 function initReveal() {
   const obs = new IntersectionObserver(entries => {
@@ -277,5 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobile();
   initLightbox();
   initForm();
+  initGalleryTabs();
   initReveal();
 });
