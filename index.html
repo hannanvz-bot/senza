@@ -3,23 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>SENZA | Intimate Photography by VZ</title>
   <meta name="description" content="Intimate photography and erotic visual art by VZ. Private sessions in Texas, Cancún and Mexico City.">
-  <meta name="robots" content="index, follow">
-
   <meta property="og:title" content="SENZA | Intimate Photography by VZ">
   <meta property="og:description" content="Intimate photography and erotic visual art. Private sessions.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/hero-01.png">
-  <meta property="og:url" content="https://senza.com">
-
   <link rel="icon" type="image/png" href="assets/images/logo.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;1,200;1,300&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
-
   <link rel="preload" as="image" href="assets/images/hero-01.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,7 +23,6 @@
   <a href="#hero" aria-label="SENZA — Home">
     <img src="assets/images/logo.png" alt="SENZA intimate photography by VZ" class="logo">
   </a>
-
   <nav role="navigation" aria-label="Main navigation">
     <ul class="nav-links">
       <li><span class="nav-locations" data-i18n="locations">Texas · Cancún · Mexico City</span></li>
@@ -48,10 +40,7 @@
       </li>
     </ul>
   </nav>
-
-  <button class="hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </header>
 
 <!-- MOBILE MENU -->
@@ -73,52 +62,42 @@
   <!-- 01 / HERO -->
   <section id="hero" aria-label="Hero">
     <div class="hero-inner">
-      <div class="hero-slide active">
-        <img src="assets/images/hero-01.png" alt="SENZA — intimate photography" draggable="false">
-      </div>
-      <div class="hero-slide">
-        <img src="assets/images/hero-02.png" alt="SENZA — intimate photography" draggable="false" loading="lazy">
-      </div>
-      <div class="hero-slide">
-        <img src="assets/images/hero-03.png" alt="SENZA — intimate photography" draggable="false" loading="lazy">
-      </div>
-      <div class="hero-slide">
-        <img src="assets/images/hero-04.png" alt="SENZA — intimate photography" draggable="false" loading="lazy">
-      </div>
-      <div class="hero-slide">
-        <img src="assets/images/hero-05.png" alt="SENZA — intimate photography" draggable="false" loading="lazy">
-      </div>
-
-      <!-- Hero wordmark overlay — muy sutil -->
+      <div class="hero-slide active"><img src="assets/images/hero-01.png" alt="SENZA" draggable="false"></div>
+      <div class="hero-slide"><img src="assets/images/hero-02.png" alt="SENZA" draggable="false" loading="lazy"></div>
+      <div class="hero-slide"><img src="assets/images/hero-03.png" alt="SENZA" draggable="false" loading="lazy"></div>
+      <div class="hero-slide"><img src="assets/images/hero-04.png" alt="SENZA" draggable="false" loading="lazy"></div>
+      <div class="hero-slide"><img src="assets/images/hero-05.png" alt="SENZA" draggable="false" loading="lazy"></div>
+      <div class="hero-overlay"></div>
       <div class="hero-wordmark">
         <span class="hero-sub" data-i18n="hero_sub">intimate photography</span>
       </div>
-
       <div class="hero-controls">
         <button class="hero-btn hero-btn-prev" aria-label="Previous">&#8592;</button>
         <ul class="hero-dots" role="tablist"></ul>
         <button class="hero-btn hero-btn-next" aria-label="Next">&#8594;</button>
       </div>
+      <!-- Scroll down arrow -->
+      <a href="#intro" class="hero-scroll" aria-label="Scroll down">
+        <svg width="14" height="24" viewBox="0 0 14 24" fill="none">
+          <line x1="7" y1="0" x2="7" y2="20" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+          <polyline points="2,15 7,21 12,15" fill="none" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+        </svg>
+      </a>
     </div>
   </section>
 
   <!-- 02 / INTRO -->
   <section id="intro">
     <div class="intro-inner">
-      <p class="tagline reveal" data-i18n="tagline">
-        Intimate photography<br>and erotic visual art.
-      </p>
+      <p class="tagline reveal" data-i18n="tagline">Intimate photography<br>and erotic visual art.</p>
       <div class="intro-line reveal"></div>
-      <p class="intro-sub reveal" data-i18n="intro_sub">
-        Texas · Cancún · Mexico City
-      </p>
+      <p class="intro-sub reveal" data-i18n="intro_sub">Texas · Cancún · Mexico City</p>
     </div>
   </section>
 
   <!-- 03 / GALLERY -->
   <section id="gallery">
     <div class="section-label reveal" data-i18n="gallery_label">Gallery</div>
-
     <div class="gallery-grid">
       <div class="gallery-item reveal"><img src="assets/images/gallery-01.png" alt="SENZA" draggable="false" loading="lazy"></div>
       <div class="gallery-item reveal"><img src="assets/images/gallery-02.png" alt="SENZA" draggable="false" loading="lazy"></div>
@@ -153,22 +132,18 @@
   <section id="testimonials">
     <div class="section-label reveal" data-i18n="testi_label">Testimonials</div>
     <p class="testi-note reveal" data-i18n="testi_note">— Sample texts —</p>
-
     <blockquote class="testimonial reveal">
       <p class="testi-quote" data-i18n="testi1">"An experience unlike any I had imagined. Everything felt elegant, intimate — and completely mine."</p>
       <cite class="testi-meta" data-i18n="testi1_meta">Private client — Texas</cite>
     </blockquote>
-
     <blockquote class="testimonial reveal">
       <p class="testi-quote" data-i18n="testi2">"I left with images I never thought I could have of myself. The process was respectful, warm, and deeply artistic."</p>
       <cite class="testi-meta" data-i18n="testi2_meta">Private client — New York</cite>
     </blockquote>
-
     <blockquote class="testimonial reveal">
       <p class="testi-quote" data-i18n="testi3">"SENZA is not a photoshoot. It's the opportunity to see yourself as you truly are — without filters, without shame."</p>
       <cite class="testi-meta" data-i18n="testi3_meta">Couple — Cancún</cite>
     </blockquote>
-
     <blockquote class="testimonial reveal">
       <p class="testi-quote" data-i18n="testi4">"Une expérience d'une élégance absolue. VZ sait créer un espace où tout devient possible."</p>
       <cite class="testi-meta" data-i18n="testi4_meta">Private client — Paris</cite>
@@ -180,49 +155,47 @@
     <div class="contact-info">
       <div class="section-label reveal" data-i18n="contact_label">Contact</div>
       <h2 class="contact-headline reveal" data-i18n="contact_headline">Every image begins<br>with a conversation.</h2>
-
       <div class="contact-details reveal">
         <div class="contact-item">
           <span class="contact-item-label">Email</span>
           <a href="mailto:vsziane@gmail.com">vsziane@gmail.com</a>
         </div>
         <div class="contact-item">
-          <span class="contact-item-label">WhatsApp</span>
-          <a href="https://wa.me/529981552555" target="_blank" rel="noopener">+52 998 155 2555</a>
+          <span class="contact-item-label">WhatsApp · USA</span>
+          <a href="https://wa.me/14097108797" target="_blank" rel="noopener">+1 409-710-8797</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">WhatsApp · MX</span>
+          <a href="https://wa.me/529981552555" target="_blank" rel="noopener">+52 998-155-2555</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Instagram</span>
+          <a href="https://www.instagram.com/___senza___" target="_blank" rel="noopener">@___senza___</a>
         </div>
         <div class="contact-item">
           <span class="contact-item-label" data-i18n="label_sessions">Sessions</span>
           <span data-i18n="contact_avail">Available in Texas (USA), Cancún &amp; Mexico City.</span>
         </div>
       </div>
-
-      <p class="contact-privacy reveal" data-i18n="contact_privacy">
-        All sessions are conducted in complete privacy, with absolute respect for the intimacy and consent of every participant.
-      </p>
+      <p class="contact-privacy reveal" data-i18n="contact_privacy">All sessions are conducted in complete privacy, with absolute respect for the intimacy and consent of every participant.</p>
     </div>
-
     <div class="contact-form-wrapper">
-      <form id="contact-form" class="contact-form reveal" novalidate
-            action="https://formspree.io/f/XXXXXXXX" method="POST">
-
+      <form id="contact-form" class="contact-form reveal" novalidate action="https://formspree.io/f/XXXXXXXX" method="POST">
         <div class="form-field">
           <label for="f-name" data-i18n="field_name">Name</label>
           <input type="text" id="f-name" name="name" autocomplete="name" aria-required="true">
           <span class="field-error" data-i18n="err_name">Please enter your name.</span>
         </div>
-
         <div class="form-field">
           <label for="f-email" data-i18n="field_email">Email</label>
           <input type="email" id="f-email" name="email" autocomplete="email" aria-required="true">
           <span class="field-error" data-i18n="err_email">Please enter a valid email.</span>
         </div>
-
         <div class="form-field">
           <label for="f-msg" data-i18n="field_message">Message</label>
           <textarea id="f-msg" name="message" aria-required="true"></textarea>
           <span class="field-error" data-i18n="err_msg">Please enter your message.</span>
         </div>
-
         <button type="submit" class="btn-submit" data-i18n="btn_send">Send message</button>
       </form>
       <p class="form-success" data-i18n="form_ok">Your message has been sent. Thank you.</p>
@@ -235,8 +208,16 @@
 <footer id="footer">
   <p class="footer-copy" data-i18n="footer_copy">© 2026 SENZA · intimate photography by VZ</p>
   <ul class="footer-links">
-    <li><a href="#" aria-label="Instagram">Instagram</a></li>
-    <li><a href="https://wa.me/529981552555" target="_blank" rel="noopener">WhatsApp</a></li>
+    <li>
+      <a href="https://www.instagram.com/___senza___" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://wa.me/14097108797" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </a>
+    </li>
     <li><a href="mailto:vsziane@gmail.com">vsziane@gmail.com</a></li>
   </ul>
 </footer>
@@ -247,6 +228,19 @@
   <img class="lightbox-img" src="" alt="" draggable="false">
   <button class="lightbox-next" aria-label="Next">&#8594;</button>
   <button class="lightbox-close" aria-label="Close">&#10005;</button>
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-buttons">
+  <a href="https://www.instagram.com/___senza___" target="_blank" rel="noopener" class="float-btn float-ig" aria-label="Instagram">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+  </a>
+  <a href="https://wa.me/14097108797" target="_blank" rel="noopener" class="float-btn float-wa" aria-label="WhatsApp">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </a>
+  <button class="float-btn float-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="7" y1="13" x2="7" y2="2" stroke="currentColor" stroke-width="1.2"/><polyline points="2,7 7,1 12,7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+  </button>
 </div>
 
 <script src="js/script.js"></script>
