@@ -293,7 +293,7 @@ function initFlipCards() {
       const ok = this.closest('.flip-back').querySelector('.flip-ok');
 
       try {
-        /* Send to Formspree → arrives at vsziane@gmail.com */
+        /* Send to Formspree → arrives at senzaphotography@outlook.com */
         await fetch('https://formspree.io/f/xdkozgkw', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
