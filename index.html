@@ -57,13 +57,9 @@
   <!-- 01 / HOME — Portrait de Vane + tagline + locations -->
   <section id="home" class="home-section">
 
-    <!-- Fondo: video cinematográfico SENZA -->
+    <!-- Fondo: silueta champagne -->
     <div class="home-bg">
-      <video class="home-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
-        <source src="assets/senza-hero.mp4" type="video/mp4">
-        <!-- Fallback foto si el video no carga -->
-        <img src="assets/images/gallery-bw-01.png" alt="">
-      </video>
+      <img src="assets/images/gallery-bw-01.png" alt="" draggable="false" aria-hidden="true">
       <div class="home-bg-veil"></div>
     </div>
 
@@ -223,7 +219,21 @@
     </div>
   </section>
 
-  <!-- 03 / GALLERY — Solo una foto de entrada, portfolio al abrir -->
+  <!-- 03 / VIDEO — Cinematic brand film -->
+  <section id="brand-video" class="video-section">
+    <div class="video-label reveal" data-i18n="video_label">The Experience</div>
+    <div class="video-wrap reveal">
+      <video class="brand-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/senza-hero.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay">
+        <p class="video-overlay-text" data-i18n="video_cta">Book your session now</p>
+        <a href="#contact" class="video-overlay-btn" data-i18n="home_cta">Reserve a session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 / GALLERY — Solo una foto de entrada, portfolio al abrir -->
   <section id="gallery">
     <div class="gallery-intro reveal">
       <div class="section-label" data-i18n="gallery_label">Gallery</div>
