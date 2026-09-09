@@ -39,6 +39,7 @@ const i18n = {
     err_name:'Please enter your name.',
     err_email:'Please enter a valid email.',
     err_msg:'Please enter your message.',
+    video_label:'The Experience', video_cta:'Book your session now',
     flip_hint:'Book this session →', ph_name:'Your name', ph_email:'Your email', flip_send:'Send request', flip_ok:'Sent! VZ will reach out soon.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   },
@@ -78,6 +79,7 @@ const i18n = {
     err_name:'Veuillez entrer votre nom.',
     err_email:'Veuillez entrer un e-mail valide.',
     err_msg:'Veuillez entrer votre message.',
+    video_label:'L\'Expérience', video_cta:'Réservez votre séance maintenant',
     flip_hint:'Réserver cette séance →', ph_name:'Votre nom', ph_email:'Votre e-mail', flip_send:'Envoyer', flip_ok:'Envoyé! VZ vous contactera bientôt.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   },
@@ -117,6 +119,7 @@ const i18n = {
     err_name:'Por favor, escribe tu nombre.',
     err_email:'Por favor, escribe un correo válido.',
     err_msg:'Por favor, escribe tu mensaje.',
+    video_label:'La Experiencia', video_cta:'Reserva tu sesión ahora',
     flip_hint:'Reservar esta sesión →', ph_name:'Tu nombre', ph_email:'Tu correo', flip_send:'Enviar solicitud', flip_ok:'¡Enviado! VZ te contactará pronto.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
   }
