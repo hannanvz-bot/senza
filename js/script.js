@@ -139,7 +139,7 @@ function heroGoto(i) {
 }
 function heroPlay() {
   clearInterval(heroTimer);
-  heroTimer = setInterval(() => heroGoto(heroIdx + 1), 9000);
+  heroTimer = setInterval(() => heroGoto(heroIdx + 1), 5000);
 }
 function initHero() {
   const slides = $$('.hero-slide');
@@ -276,6 +276,51 @@ function initGalleryTabs() {
   });
 }
 
+
+/* ── ABOUT PORTRAIT — cursor magnético + morph ── */
+function initAboutPortrait() {
+  const wrap = document.getElementById('aboutPortrait');
+  const dot  = document.getElementById('aboutCursorDot');
+  if (!wrap || !dot) return;
+
+  let mouseX = 0, mouseY = 0;
+  let dotX = 0, dotY = 0;
+  let rafId = null;
+
+  wrap.addEventListener('mousemove', e => {
+    const rect = wrap.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+
+    // Movimiento magnético sutil de la imagen principal
+    const main = wrap.querySelector('.about-portrait-main');
+    const ghost = wrap.querySelector('.about-portrait-ghost');
+    const dx = (mouseX / rect.width  - 0.5) * 10;
+    const dy = (mouseY / rect.height - 0.5) * 10;
+    if (main)  main.style.transform  = `translate(${dx}px, ${dy}px) scale(1.03)`;
+    if (ghost) ghost.style.transform = `translate(${dx * 0.6}px, ${dy * 0.6}px)`;
+
+    if (!rafId) rafId = requestAnimationFrame(animDot);
+  });
+
+  wrap.addEventListener('mouseleave', () => {
+    const main  = wrap.querySelector('.about-portrait-main');
+    const ghost = wrap.querySelector('.about-portrait-ghost');
+    if (main)  main.style.transform  = '';
+    if (ghost) ghost.style.transform = '';
+    cancelAnimationFrame(rafId);
+    rafId = null;
+  });
+
+  function animDot() {
+    dotX += (mouseX - dotX) * 0.12;
+    dotY += (mouseY - dotY) * 0.12;
+    dot.style.left = dotX + 'px';
+    dot.style.top  = dotY + 'px';
+    rafId = requestAnimationFrame(animDot);
+  }
+}
+
 /* ── REVEAL ── */
 function initReveal() {
   const obs = new IntersectionObserver(entries => {
@@ -303,5 +348,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initForm();
   initGalleryTabs();
+  initAboutPortrait();
   initReveal();
 });
