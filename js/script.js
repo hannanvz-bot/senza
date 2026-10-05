@@ -242,11 +242,14 @@ function lbNav(d) {
   setTimeout(() => { img.src = galleryImgs[lbIdx].src; img.style.opacity = '1'; }, 150);
 }
 function initLightbox() {
-  const items = $$('.gallery-item');
-  galleryImgs = items.map(el => ({ src: el.querySelector('img').src }));
-  items.forEach((el, i) => {
+  const galleryItems = $$('.gallery-item');
+  const weddingItems = $$('.wg-hero, .wg-item');
+  const allItems = [...galleryItems, ...weddingItems];
+  galleryImgs = allItems.map(el => ({ src: el.querySelector('img').src }));
+  allItems.forEach((el, i) => {
     el.addEventListener('click', () => openLb(i));
     el.setAttribute('role', 'button'); el.setAttribute('tabindex', '0');
+    el.style.cursor = 'pointer';
     el.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') openLb(i); });
   });
   $('.lightbox-close')?.addEventListener('click', closeLb);
