@@ -1149,3 +1149,206 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) {
   #intro { padding: 80px 24px; }
 }
+
+
+/* ═══════════════════════════════════════════════════════
+   05 / WEDDINGS — White universe
+   ═══════════════════════════════════════════════════════ */
+
+#weddings {
+  background: #fff;
+  color: #000;
+  padding: 120px 0 100px;
+}
+
+.weddings-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+/* ── Header ── */
+.weddings-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.weddings-label {
+  display: block;
+  color: #999;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: var(--f-sans);
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.weddings-headline {
+  font-family: var(--f-serif);
+  font-weight: 200;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: #000;
+  text-wrap: balance;
+  margin: 0 0 28px;
+}
+
+.weddings-sub {
+  font-family: var(--f-sans);
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── Grid container ── */
+.weddings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Row A: big hero left + two stacked right ── */
+.wg-row-a {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 4px;
+  height: 580px;
+}
+
+.wg-hero {
+  overflow: hidden;
+}
+
+.wg-stack-a {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+}
+
+/* ── Row B: three equal ── */
+.wg-trio {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 4px;
+  height: 400px;
+}
+
+/* ── Row C: three bottom ── */
+.wg-bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.9fr;
+  gap: 4px;
+  height: 440px;
+}
+
+/* ── All images ── */
+.wg-hero img,
+.wg-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.9s var(--ease);
+}
+
+.wg-hero,
+.wg-item {
+  overflow: hidden;
+}
+
+.wg-hero:hover img,
+.wg-item:hover img {
+  transform: scale(1.04);
+}
+
+/* ── Footer CTA ── */
+.weddings-footer {
+  text-align: center;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.weddings-quote {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-weight: 200;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: #333;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.weddings-cta {
+  display: inline-block;
+  border: 1px solid #000;
+  color: #000;
+  background: transparent;
+  font-family: var(--f-sans);
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 40px;
+  transition: background 0.35s var(--ease), color 0.35s var(--ease);
+}
+
+.weddings-cta:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .wg-row-a {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .wg-hero {
+    height: 340px;
+  }
+
+  .wg-stack-a {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  #weddings { padding: 80px 0 60px; }
+
+  .weddings-inner { padding: 0 20px; }
+
+  .weddings-header { margin-bottom: 40px; }
+
+  .wg-hero { height: 280px; }
+
+  .wg-stack-a { height: 160px; }
+
+  .wg-trio {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+  }
+  .wg-trio .wg-item { height: 200px; }
+  .wg-trio .wg-item:last-child { grid-column: 1 / -1; height: 200px; }
+
+  .wg-bottom {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+  }
+  .wg-bottom .wg-item { height: 200px; }
+  .wg-bottom .wg-item:first-child { grid-column: 1 / -1; height: 240px; }
+
+  .weddings-footer { margin-top: 40px; gap: 24px; }
+}

@@ -4,7 +4,7 @@
 
 const i18n = {
   en: {
-    nav_home:'Home', nav_book:'Book', nav_gallery:'Gallery', nav_contact:'Contact',
+    nav_home:'Home', nav_book:'Book', nav_gallery:'Gallery', nav_weddings:'Weddings', nav_contact:'Contact',
     home_label:'intimate photography by VZ',
     home_headline:'Book your\ntransformation.',
     home_sub:'USA · Mexico · Spain · South of France',
@@ -43,9 +43,14 @@ const i18n = {
     video_label:'The Experience', video_cta:'Book your session now',
     flip_hint:'Book this session →', ph_name:'Your name', ph_email:'Your email', flip_send:'Send request', flip_ok:'Sent! VZ will reach out soon.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
+    weddings_label:'Weddings & Engagements',
+    weddings_headline:'Where love\nbecomes light.',
+    weddings_sub:'Each couple carries a universe of their own. VZ travels to Cancún, Texas, Spain and beyond — to document the intimacy, the trembling, the joy that no posed portrait can contain.',
+    weddings_quote:'"Photography is a love affair with life."',
+    weddings_cta:'Book your wedding session',
   },
   fr: {
-    nav_home:'Accueil', nav_book:'Réserver', nav_gallery:'Galerie', nav_contact:'Contact',
+    nav_home:'Accueil', nav_book:'Réserver', nav_gallery:'Galerie', nav_weddings:'Mariages', nav_contact:'Contact',
     home_label:'photographie intime par VZ',
     home_headline:'Réservez votre\ntransformation.',
     home_sub:'USA · Mexique · Espagne · Sud de la France',
@@ -84,9 +89,14 @@ const i18n = {
     video_label:'L\'Expérience', video_cta:'Réservez votre séance maintenant',
     flip_hint:'Réserver cette séance →', ph_name:'Votre nom', ph_email:'Votre e-mail', flip_send:'Envoyer', flip_ok:'Envoyé! VZ vous contactera bientôt.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
+    weddings_label:'Mariages & Fiançailles',
+    weddings_headline:'Là où l\'amour\ndevient lumière.',
+    weddings_sub:'Chaque couple porte son propre univers. VZ se déplace à Cancún, au Texas, en Espagne et au-delà — pour capturer l\'intimité, le frisson, la joie qu\'aucun portrait posé ne peut contenir.',
+    weddings_quote:'"La photographie est une histoire d\'amour avec la vie."',
+    weddings_cta:'Réserver votre séance mariage',
   },
   es: {
-    nav_home:'Inicio', nav_book:'Reservar', nav_gallery:'Galería', nav_contact:'Contacto',
+    nav_home:'Inicio', nav_book:'Reservar', nav_gallery:'Galería', nav_weddings:'Bodas', nav_contact:'Contacto',
     home_label:'fotografía íntima por VZ',
     home_headline:'Reserva tu\ntransformación.',
     home_sub:'USA · México · España · Sur de Francia',
@@ -125,6 +135,11 @@ const i18n = {
     video_label:'La Experiencia', video_cta:'Reserva tu sesión ahora',
     flip_hint:'Reservar esta sesión →', ph_name:'Tu nombre', ph_email:'Tu correo', flip_send:'Enviar solicitud', flip_ok:'¡Enviado! VZ te contactará pronto.',
     footer_copy:'© 2026 SENZA · intimate photography by VZ',
+    weddings_label:'Bodas y Compromisos',
+    weddings_headline:'Donde el amor\nse vuelve luz.',
+    weddings_sub:'Cada pareja lleva su propio universo. VZ viaja a Cancún, Texas, España y más allá — para documentar la intimidad, el temblor, la alegría que ningún retrato posado puede contener.',
+    weddings_quote:'"La fotografía es un romance con la vida."',
+    weddings_cta:'Reserva tu sesión de boda',
   }
 };
 
