@@ -301,28 +301,6 @@ function initForm() {
 
 
 
-/* ── BODY PARALLAX — soft scroll effect on cinematic frames ── */
-function initBodyParallax() {
-  const frames = document.querySelectorAll('.body-frame img');
-  if (!frames.length) return;
-
-  function onScroll() {
-    frames.forEach(img => {
-      const rect = img.closest('.body-frame').getBoundingClientRect();
-      const vh = window.innerHeight;
-      // Only animate when partially in view
-      if (rect.bottom < 0 || rect.top > vh) return;
-      // Progress from 0 (top enters) to 1 (bottom leaves)
-      const progress = 1 - (rect.bottom / (vh + rect.height));
-      // Shift the image up to 6% as you scroll past
-      const shift = progress * 6;
-      img.style.transform = `scale(1.08) translateY(${shift}%)`;
-    });
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // Initial call
-}
 
 /* ── REVEAL ── */
 function initReveal() {
@@ -346,6 +324,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initLightbox();
   initForm();
-  initBodyParallax();
   initReveal();
 });
