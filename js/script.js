@@ -215,16 +215,25 @@ function initTabs() {
   $$('.gtab').forEach(tab => {
     tab.addEventListener('click', () => {
       const target = tab.dataset.tab;
+      const current = document.querySelector('.gallery-pane.active');
+      const next = document.getElementById('gallery-' + target);
+      if (!next || next === current) return;
+
+      // Update tab buttons immediately
       $$('.gtab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      $$('.gallery-pane').forEach(p => p.classList.remove('active'));
-      const pane = document.getElementById('gallery-' + target);
-      if (pane) {
-        pane.classList.add('active');
-        $$('#gallery-' + target + ' .reveal:not(.visible)').forEach(el => {
-          requestAnimationFrame(() => el.classList.add('visible'));
-        });
-      }
+
+      // Fade out current, then fade in next
+      if (current) current.classList.remove('active');
+      // Small delay so CSS transition on outgoing pane starts before incoming
+      setTimeout(() => {
+        if (next) {
+          next.classList.add('active');
+          $$('#gallery-' + target + ' .reveal:not(.visible)').forEach(el => {
+            requestAnimationFrame(() => el.classList.add('visible'));
+          });
+        }
+      }, 80);
     });
   });
 }

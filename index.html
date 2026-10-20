@@ -116,13 +116,14 @@
 
     <!-- Tabs: sin botones feos, solo texto elegante -->
     <div class="gallery-tabs-clean reveal">
-      <button class="gtab active" data-tab="color" data-i18n="tab_color">Color</button>
+      <button class="gtab" data-tab="color" data-i18n="tab_color">Color</button>
       <span class="gtab-dot"></span>
-      <button class="gtab" data-tab="bw" data-i18n="tab_bw">B&amp;W</button>
+      <button class="gtab active" data-tab="bw" data-i18n="tab_bw">B&amp;W</button>
     </div>
 
+    <div class="gallery-panes-wrap">
     <!-- COLOR -->
-    <div class="gallery-grid gallery-pane active" id="gallery-color">
+    <div class="gallery-grid gallery-pane" id="gallery-color">
       <div class="gallery-item reveal"><img src="assets/images/gallery-01.png" alt="SENZA" draggable="false" loading="lazy"></div>
       <div class="gallery-item reveal"><img src="assets/images/gallery-02.png" alt="SENZA" draggable="false" loading="lazy"></div>
       <div class="gallery-item reveal"><img src="assets/images/gallery-04.png" alt="SENZA" draggable="false" loading="lazy"></div>
@@ -133,7 +134,7 @@
     </div>
 
     <!-- B&W -->
-    <div class="gallery-grid gallery-pane" id="gallery-bw">
+    <div class="gallery-grid gallery-pane active" id="gallery-bw">
       <div class="gallery-item reveal bw"><img src="assets/images/gallery-bw-01.png" alt="SENZA B&W" draggable="false" loading="lazy"></div>
       <div class="gallery-item reveal bw"><img src="assets/images/gallery-bw-02.png" alt="SENZA B&W" draggable="false" loading="lazy"></div>
       <div class="gallery-item reveal bw"><img src="assets/images/gallery-08.png"    alt="SENZA B&W" draggable="false" loading="lazy"></div>
