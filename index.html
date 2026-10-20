@@ -97,35 +97,17 @@
     </div>
   </section>
 
-  <!-- 03 / BOOK — Marquee transition -->
+    <!-- 03 / BODY — Cinematic flow: el cuerpo de la página es el cuerpo -->
   <section id="book">
-    <div class="book-marquee-wrap">
-      <div class="book-marquee" aria-hidden="true">
-        <span data-i18n="marquee_t1">Portraiture</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t2">Boudoir</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t3">Editorial</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t4">Couples</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t5">Maternity</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t6">Fine Art</span>
-        <span class="book-marquee-dot">·</span>
-        <!-- duplicate for seamless loop -->
-        <span data-i18n="marquee_t1">Portraiture</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t2">Boudoir</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t3">Editorial</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t4">Couples</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t5">Maternity</span>
-        <span class="book-marquee-dot">·</span>
-        <span data-i18n="marquee_t6">Fine Art</span>
-        <span class="book-marquee-dot">·</span>
+    <div class="body-flow">
+      <div class="body-frame body-frame--1" aria-hidden="true">
+        <img src="assets/images/gallery-bw-01.png" alt="" draggable="false">
+      </div>
+      <div class="body-frame body-frame--2" aria-hidden="true">
+        <img src="assets/images/gallery-02.png" alt="" draggable="false">
+      </div>
+      <div class="body-frame body-frame--3" aria-hidden="true">
+        <img src="assets/images/gallery-bw-02.png" alt="" draggable="false">
       </div>
     </div>
     <div class="book-cta-block">
@@ -236,17 +218,6 @@
           <label for="f-email" data-i18n="field_email">Email</label>
           <input type="email" id="f-email" name="email" autocomplete="email" aria-required="true">
           <span class="field-error" data-i18n="err_email">Please enter a valid email.</span>
-        </div>
-        <div class="form-field">
-          <label for="f-session" data-i18n="field_session">Session type</label>
-          <select id="f-session" name="session_type">
-            <option value="" data-i18n="opt_select">Select...</option>
-            <option value="women"    data-i18n="s_women">Women</option>
-            <option value="couples"  data-i18n="s_couples">Couples</option>
-            <option value="boudoir"  data-i18n="s_boudoir">Boudoir</option>
-            <option value="family"   data-i18n="s_family">Family &amp; Maternity</option>
-            <option value="corporate"data-i18n="s_corporate">Corporate &amp; Personal Brand</option>
-          </select>
         </div>
         <div class="form-field">
           <label for="f-msg" data-i18n="field_message">Message</label>

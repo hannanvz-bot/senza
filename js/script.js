@@ -11,7 +11,6 @@ const i18n = {
     home_cta:'View sessions',
     book_label:'Sessions',
     book_headline:'What would you like\nto create?',
-    marquee_t1:'Portraiture', marquee_t2:'Boudoir', marquee_t3:'Editorial', marquee_t4:'Couples', marquee_t5:'Maternity', marquee_t6:'Fine Art',
     book_cta_line:'Every session begins with a conversation.', book_cta_btn:'Begin yours →',
     s_women:'Women',
     s_women_d:'A private session that celebrates your body, sensuality and confidence — entirely on your terms.',
@@ -60,7 +59,6 @@ const i18n = {
     home_cta:'Voir les séances',
     book_label:'Séances',
     book_headline:'Qu\'aimeriez-vous\ncréer?',
-    marquee_t1:'Portraits', marquee_t2:'Boudoir', marquee_t3:'Éditorial', marquee_t4:'Couples', marquee_t5:'Maternité', marquee_t6:'Art',
     book_cta_line:'Chaque séance commence par une conversation.', book_cta_btn:'Commencez la vôtre →',
     s_women:'Femmes',
     s_women_d:'Une séance privée qui célèbre votre corps, votre sensualité et votre confiance — entièrement selon vos conditions.',
@@ -109,7 +107,6 @@ const i18n = {
     home_cta:'Ver sesiones',
     book_label:'Sesiones',
     book_headline:'¿Qué te gustaría\ncrear?',
-    marquee_t1:'Retrato', marquee_t2:'Boudoir', marquee_t3:'Editorial', marquee_t4:'Parejas', marquee_t5:'Maternidad', marquee_t6:'Arte',
     book_cta_line:'Cada sesión comienza con una conversación.', book_cta_btn:'Comienza la tuya →',
     s_women:'Mujeres',
     s_women_d:'Una sesión privada que celebra tu cuerpo, sensualidad y confianza — completamente en tus términos.',
@@ -301,75 +298,30 @@ function initForm() {
 }
 
 
-/* ── FLIP CARDS — submit to Formspree + WhatsApp notification ── */
-function initFlipCards() {
-  /* Mobile: click to flip */
-  document.querySelectorAll('.flip-card:not(.flip-card--cta)').forEach(card => {
-    card.addEventListener('click', function(e) {
-      if (window.innerWidth <= 1024 && !e.target.closest('form') && !e.target.closest('button')) {
-        this.classList.toggle('flipped');
-      }
-    });
-  });
 
-  /* Form submit — Formspree + WhatsApp link */
-  document.querySelectorAll('.flip-form').forEach(form => {
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const session = this.dataset.session;
-      const name    = this.querySelector('[name="name"]').value.trim();
-      const email   = this.querySelector('[name="email"]').value.trim();
-      if (!name || !email) return;
 
-      const ok = this.closest('.flip-back').querySelector('.flip-ok');
 
-      try {
-        /* Send to Formspree → arrives at senzaphotography@outlook.com */
-        await fetch('https://formspree.io/f/xdkozgkw', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            name, email,
-            session_type: session,
-            _subject: `SENZA — New ${session} booking request from ${name}`,
-            message: `Session: ${session}\nName: ${name}\nEmail: ${email}`
-          })
-        });
+/* ── BODY PARALLAX — soft scroll effect on cinematic frames ── */
+function initBodyParallax() {
+  const frames = document.querySelectorAll('.body-frame img');
+  if (!frames.length) return;
 
-        /* Show success */
-        this.style.display = 'none';
-        ok.style.display = 'block';
-
-        /* Open WhatsApp MX with pre-filled message */
-        const msg = encodeURIComponent(
-          `Hi VZ! I just requested a *${session}* session on SENZA.\nName: ${name}\nEmail: ${email}`
-        );
-        setTimeout(() => {
-          window.open(`https://wa.me/529981552555?text=${msg}`, '_blank');
-        }, 800);
-
-      } catch(err) {
-        ok.textContent = 'Something went wrong. Please try again.';
-        ok.style.display = 'block';
-      }
-    });
-  });
-
-  /* Translate placeholders */
-  function updatePlaceholders() {
-    const t = i18n[lang];
-    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
-      const k = el.dataset.i18nPh;
-      if (t[k]) el.placeholder = t[k];
+  function onScroll() {
+    frames.forEach(img => {
+      const rect = img.closest('.body-frame').getBoundingClientRect();
+      const vh = window.innerHeight;
+      // Only animate when partially in view
+      if (rect.bottom < 0 || rect.top > vh) return;
+      // Progress from 0 (top enters) to 1 (bottom leaves)
+      const progress = 1 - (rect.bottom / (vh + rect.height));
+      // Shift the image up to 6% as you scroll past
+      const shift = progress * 6;
+      img.style.transform = `scale(1.08) translateY(${shift}%)`;
     });
   }
 
-  /* Hook into language changes */
-  const origApply = window._applyLangOrig || applyLang;
-  window._applyLangOrig = origApply;
-  const origRef = applyLang;
-  updatePlaceholders();
-  document.addEventListener('senza:langchange', updatePlaceholders);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // Initial call
 }
 
 /* ── REVEAL ── */
@@ -394,6 +346,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initLightbox();
   initForm();
-  initFlipCards();
+  initBodyParallax();
   initReveal();
 });
